@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_perguntas/resultado.dart';
-import 'package:projeto_perguntas/questionario.dart';
+import './questionario.dart';
+import './resultado.dart';
 
 main() => runApp(PerguntaApp());
 
@@ -8,16 +8,31 @@ class _PerguntaAppState extends State<PerguntaApp> {
   var _perguntaSelecionada = 0;
   final _perguntas = const [
     {
-      'texto': 'Qual a sua cor favorita ?',
-      'respostas': ['Preto', 'Vermelho', 'Verde', 'Branco']
+      'texto': 'Qual é a sua cor favorita?',
+      'respostas': [
+        {'texto': 'Preto', 'nota': 10},
+        {'texto': 'Vermelho', 'nota': 5},
+        {'texto': 'Verde', 'nota': 3},
+        {'texto': 'Branco', 'nota': 1},
+      ],
     },
     {
-      'texto': 'Qual o seu animal favorito ?',
-      'respostas': ['Coelho', 'Cobra', 'Elefante', 'Leão']
+      'texto': 'Qual é o seu animal favorito?',
+      'respostas': [
+        {'texto': 'Coelho', 'nota': 10},
+        {'texto': 'Cobra', 'nota': 5},
+        {'texto': 'Elefante', 'nota': 3},
+        {'texto': 'Leão', 'nota': 1},
+      ],
     },
     {
-      'texto': 'Qual o seu instrutor favorito ?',
-      'respostas': ['Maria', 'João', 'Leo', 'Pedro']
+      'texto': 'Qual é o seu instrutor favorito?',
+      'respostas': [
+        {'texto': 'Leo', 'nota': 10},
+        {'texto': 'Maria', 'nota': 5},
+        {'texto': 'João', 'nota': 3},
+        {'texto': 'Pedro', 'nota': 1},
+      ],
     }
   ];
 
@@ -26,7 +41,6 @@ class _PerguntaAppState extends State<PerguntaApp> {
       setState(() {
         _perguntaSelecionada++;
       });
-      print(temPerguntaSelecionada);
     }
   }
 
@@ -35,26 +49,26 @@ class _PerguntaAppState extends State<PerguntaApp> {
   }
 
   @override
-  Widget build(BuildContext conext) {
+  Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: Text('Perguntas'),
-          ),
-          body: temPerguntaSelecionada
-              ? Questionario(
-                  perguntas: _perguntas,
-                  perguntaSelecionada: _perguntaSelecionada,
-                  quandoResponder: _responder,
-                )
-              : Resultado()),
+        appBar: AppBar(
+          title: Text('Perguntas'),
+        ),
+        body: temPerguntaSelecionada
+            ? Questionario(
+                perguntas: _perguntas,
+                perguntaSelecionada: _perguntaSelecionada,
+                quantoResponder: _responder,
+              )
+            : Resultado(),
+      ),
     );
   }
 }
 
 class PerguntaApp extends StatefulWidget {
-  @override
   _PerguntaAppState createState() {
-    return new _PerguntaAppState();
+    return _PerguntaAppState();
   }
 }
