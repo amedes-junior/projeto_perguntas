@@ -64,7 +64,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
     {
       'texto': 'Que tipo de comida que você Prefere?',
       'respostas': [
-        {'texto': 'Arroz', 'pontuacao': 10},
+        {'texto': 'Arroz', 'pontuacao': 9},
         {'texto': 'Feijão', 'pontuacao': 5},
         {'texto': 'Macarrão', 'pontuacao': 3},
         {'texto': 'Sushi', 'pontuacao': 1},
