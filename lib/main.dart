@@ -42,6 +42,33 @@ class _PerguntaAppState extends State<PerguntaApp> {
         {'texto': 'João', 'pontuacao': 3},
         {'texto': 'Pedro', 'pontuacao': 1},
       ],
+    },
+    {
+      'texto': 'Qual é o seu Time de Futebol Favorito?',
+      'respostas': [
+        {'texto': 'Flamengo', 'pontuacao': 10},
+        {'texto': 'São Paulo', 'pontuacao': 5},
+        {'texto': 'Palmeiras', 'pontuacao': 3},
+        {'texto': 'Santos', 'pontuacao': 1},
+      ],
+    },
+    {
+      'texto': 'Que tipo de Bike você gosta de pedalar?',
+      'respostas': [
+        {'texto': 'Speed', 'pontuacao': 10},
+        {'texto': 'MTB', 'pontuacao': 5},
+        {'texto': 'Urbana', 'pontuacao': 3},
+        {'texto': 'Gravel', 'pontuacao': 1},
+      ],
+    },
+    {
+      'texto': 'Que tipo de comida que você Prefere?',
+      'respostas': [
+        {'texto': 'Arroz', 'pontuacao': 10},
+        {'texto': 'Feijão', 'pontuacao': 5},
+        {'texto': 'Macarrão', 'pontuacao': 3},
+        {'texto': 'Sushi', 'pontuacao': 1},
+      ],
     }
   ];
 
