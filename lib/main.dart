@@ -69,6 +69,15 @@ class _PerguntaAppState extends State<PerguntaApp> {
         {'texto': 'Macarrão', 'pontuacao': 3},
         {'texto': 'Sushi', 'pontuacao': 1},
       ],
+    },
+    {
+      'texto': 'Qual linguagem de Programação você Prefere ?',
+      'respostas': [
+        {'texto': 'Ruby', 'pontuacao': 9},
+        {'texto': 'Dart', 'pontuacao': 5},
+        {'texto': 'Java', 'pontuacao': 3},
+        {'texto': 'C++', 'pontuacao': 1},
+      ],
     }
   ];
 
